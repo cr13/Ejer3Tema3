@@ -28,7 +28,7 @@ app.use('/users', users);
 
 // connect to our database
 var theport = process.env.PORT || 3000;
-var url = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/partido';
+var url =  process.env.MONGODB_URI || 'mongodb://localhost:27017/partido';
 mongoose.Promise = global.Promise
 mongoose.connect(url);
 mongoose.connection.on('error', function() {
