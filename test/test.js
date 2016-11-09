@@ -19,7 +19,7 @@ describe('Test base de datos Mongo', function() {
     chai.request(server)
     .put('/porra/LaLiga_Santander/2016/sevilla/betis')
     .end(function(err, res){
-      res.should.have.status(200);
+      res.should.have.status(500);
       res.should.be.json;
       done();
     });
